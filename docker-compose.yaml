@@ -1,0 +1,14 @@
+version: '3'
+services:
+  myXampp:
+    container_name: myXampp-apps
+    image: tomsik68/xampp:8
+    ports:
+      - "41061:22"
+      - "41062:80"
+    volumes:
+      - ./ultimateerp51:/opt/lampp/htdocs/
+      - mysql_data:/opt/lampp/var/mysql
+
+volumes:
+  mysql_data:
